@@ -1,0 +1,5 @@
+# skill-description-sha256: 15e42c2a21144f862bf1acd5113a2d6905433fe52e71fa482589a95a2a6fef75
+interface:
+  display_name: "AI Automation"
+  short_description: "Design safe scheduled and autonomous AI workflows"
+  default_prompt: "Use $ai-automation to design a bounded scheduled or autonomous workflow with approval gates."

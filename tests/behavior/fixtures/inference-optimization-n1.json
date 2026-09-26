@@ -1,0 +1,27 @@
+{
+  "id": "inference-optimization-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "vLLM ile TGI arasında çok bölgeli serving topolojisi seç.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes engine and topology choice to model-serving",
+      "Defines serving SLO inputs"
+    ],
+    "must_not": [
+      "Performs quantization work that was not requested"
+    ],
+    "skill_not_invoked": "inference-optimization"
+  }
+}

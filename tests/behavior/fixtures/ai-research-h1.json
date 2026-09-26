@@ -1,0 +1,29 @@
+{
+  "id": "ai-research-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Aynı API özelliği için resmi doküman ve resmi depo sürüm etiketi çelişiyor; hangisine güveneceğimizi kanıtla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-research",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Compares authority, recency, scope, and reproducibility",
+      "Reports any unresolved conflict",
+      "Includes URL and access date"
+    ],
+    "must_not": [
+      "Silently chooses one source",
+      "Fabricates a reconciliation"
+    ]
+  }
+}

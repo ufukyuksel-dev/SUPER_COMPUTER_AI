@@ -1,0 +1,36 @@
+{
+  "recorded_at": "2026-08-24",
+  "platform": "codex",
+  "command": "codex exec --ephemeral -C <repo> -s read-only --skip-git-repo-check --json 'Use $probe-skill. Reply exactly: PROBE-OK'",
+  "cli_version": "codex-cli 0.144.0",
+  "exit_code": 0,
+  "infrastructure_error": false,
+  "observed_model": null,
+  "final_output": "PROBE-OK",
+  "events": [
+    {
+      "type": "thread.started",
+      "thread_id": "01a03454-4279-7620-a0f2-a08d7317327d"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "type": "item.completed",
+      "item": {
+        "id": "item_0",
+        "type": "agent_message",
+        "text": "PROBE-OK"
+      }
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "input_tokens": 16416,
+        "cached_input_tokens": 9984,
+        "output_tokens": 136,
+        "reasoning_output_tokens": 126
+      }
+    }
+  ]
+}

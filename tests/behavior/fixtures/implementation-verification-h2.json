@@ -1,0 +1,29 @@
+{
+  "id": "implementation-verification-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "The happy path passes; probe malformed input, retry behavior, authorization, and partial failure before signing off.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "implementation-verification",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Exercises relevant edge and failure cases",
+      "Checks actual outputs and side effects",
+      "Reports residual risk"
+    ],
+    "must_not": [
+      "Stops at the happy path",
+      "Makes evidence-free assertions"
+    ]
+  }
+}

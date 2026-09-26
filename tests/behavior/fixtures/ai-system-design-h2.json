@@ -1,0 +1,29 @@
+{
+  "id": "ai-system-design-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Plan a multi-concern AI platform and show which specialist concerns can run in parallel and which depend on others.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Builds a concern-to-skill DAG",
+      "Integrates specialist outputs into one plan",
+      "Applies one skill per concern, not one per project"
+    ],
+    "must_not": [
+      "Serializes all work without rationale",
+      "Duplicates specialist content"
+    ]
+  }
+}

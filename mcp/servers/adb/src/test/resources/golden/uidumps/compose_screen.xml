@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hierarchy rotation="0">
+  <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[0,0][1080,2400]">
+    <node index="0" text="" resource-id="" class="android.widget.FrameLayout" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[0,0][1080,2400]">
+      <node index="0" text="" resource-id="" class="androidx.compose.ui.platform.ComposeView" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[0,0][1080,2400]">
+        <node index="0" text="" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[0,0][1080,2400]">
+          <node index="0" text="Welcome to MyApp" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[140,200][940,280]" />
+          <node index="1" text="" resource-id="com.example.myapp:id/email_field" class="android.view.View" package="com.example.myapp" content-desc="Email input" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[80,320][1000,420]" />
+          <node index="2" text="" resource-id="password_field" class="android.view.View" package="com.example.myapp" content-desc="Password input" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[80,460][1000,560]" />
+          <node index="3" text="Login" resource-id="login_button" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[200,620][880,720]" />
+          <node index="4" text="Forgot password?" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[340,760][740,820]" />
+          <node index="5" text="" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="Google sign-in" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[80,880][1000,980]" />
+          <node index="6" text="" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" scrollable="true" long-clickable="false" selected="false" bounds="[0,1040][1080,2400]">
+            <node index="0" text="Terms of Service" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[80,1080][540,1140]" />
+            <node index="1" text="Privacy Policy" resource-id="" class="android.view.View" package="com.example.myapp" content-desc="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" scrollable="false" long-clickable="false" selected="false" bounds="[80,1180][480,1240]" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</hierarchy>

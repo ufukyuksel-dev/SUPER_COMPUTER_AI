@@ -1,0 +1,29 @@
+{
+  "id": "rag-engineering-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Gizli şirket dokümanlarında erişim kontrollü RAG sistemi için chunking, embedding, store, retrieval ve eval tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "rag-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Covers ingestion, chunking, embeddings, index, retrieval, reranking, ACL filtering, and RAG eval",
+      "Prevents unauthorized retrieval before generation",
+      "Defines hallucination and citation measures"
+    ],
+    "must_not": [
+      "Uses prompt instructions as access control",
+      "Ignores data egress"
+    ]
+  }
+}

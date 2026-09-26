@@ -1,0 +1,5 @@
+# skill-description-sha256: bda72a8378aa0ab4506281e073386e6abccb0b82a1653e12ec6837279c2438f8
+interface:
+  display_name: "Implementation Verification"
+  short_description: "Verify AI deliverables against acceptance evidence"
+  default_prompt: "Use $implementation-verification to exercise a claimed-complete deliverable against its acceptance criteria."

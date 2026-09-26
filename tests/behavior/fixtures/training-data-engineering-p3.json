@@ -1,0 +1,28 @@
+{
+  "id": "training-data-engineering-p3",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Our curated dataset run finished: provenance completeness 84%, near-duplicate rate 9%, and 3 validation examples appear in the synthetic seed set. Thresholds were 95%, 2%, and 0. Is it training-ready?",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Refuses the training-ready label because thresholds are unmet",
+      "Lists each failed gate explicitly",
+      "Proposes remediation steps before re-evaluation"
+    ],
+    "must_not": [
+      "Grants training-ready with caveats",
+      "Weakens thresholds to pass"
+    ]
+  }
+}

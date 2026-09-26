@@ -1,0 +1,29 @@
+{
+  "id": "rag-engineering-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Debug a RAG system that retrieves semantically related but answer-irrelevant chunks.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "rag-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Classifies retrieval versus generation failure",
+      "Tests chunking, query, hybrid search, metadata, and reranking hypotheses",
+      "Uses slice-level retrieval metrics"
+    ],
+    "must_not": [
+      "Only rewrites the prompt",
+      "Changes the base model first"
+    ]
+  }
+}

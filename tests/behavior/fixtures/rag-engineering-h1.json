@@ -1,0 +1,29 @@
+{
+  "id": "rag-engineering-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Aynı dokümanda departman bazlı yetki ve güncel olmayan kopyalar varken RAG tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "rag-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Applies authorization before retrieval and handles document versioning",
+      "Defines stale-content and leakage tests",
+      "Uses provenance in answers"
+    ],
+    "must_not": [
+      "Filters access after generation",
+      "Treats duplicates as harmless"
+    ]
+  }
+}

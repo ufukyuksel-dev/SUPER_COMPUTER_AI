@@ -1,0 +1,32 @@
+{
+  "id": "e2e-oss-serving",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Elimde tek RTX 4090 var; açık kaynak bir modeli düşük gecikmeyle servis etmek istiyorum; planla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Covers model selection and license",
+      "Shows bounded VRAM and quantization reasoning",
+      "Compares serving-stack options",
+      "Defines SLO and evaluation",
+      "Covers production monitoring",
+      "Covers cost"
+    ],
+    "must_not": [
+      "Claims a model fits without memory assumptions",
+      "Treats a benchmark as a production guarantee"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+# skill-description-sha256: 0b2fc41bfd5508a957b9ddf07700f7170caff3c49771acc4c616a40a4e5144b2
+interface:
+  display_name: "Evaluation Harness"
+  short_description: "Design reproducible AI evaluation harnesses"
+  default_prompt: "Use $eval-harness to design reproducible metrics, datasets, judging, and output regression checks."

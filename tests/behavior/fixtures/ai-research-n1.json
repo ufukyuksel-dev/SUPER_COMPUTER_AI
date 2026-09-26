@@ -1,0 +1,28 @@
+{
+  "id": "ai-research-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Bu yerel repoda PaymentService çağrı zincirini bul ve dosya/satır kanıtı ver.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "codebase-local",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses local repository evidence",
+      "Keeps current-web research out of scope"
+    ],
+    "must_not": [
+      "Uses ai-research for a local-code question",
+      "Invents a call graph"
+    ],
+    "skill_not_invoked": "ai-research"
+  }
+}

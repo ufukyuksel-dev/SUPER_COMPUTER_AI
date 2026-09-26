@@ -1,0 +1,29 @@
+{
+  "id": "eval-harness-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "LLM çıktıları için insan rubric'i, LLM-as-judge ve regresyon seti içeren eval harness tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "eval-harness",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines target behavior, slices, metrics, thresholds, and sample policy",
+      "Isolates and calibrates the judge",
+      "Records reproducible results"
+    ],
+    "must_not": [
+      "Uses one aggregate score only",
+      "Lets the judge see hidden expected reasoning"
+    ]
+  }
+}

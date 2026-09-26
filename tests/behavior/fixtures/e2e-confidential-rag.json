@@ -1,0 +1,32 @@
+{
+  "id": "e2e-confidential-rag",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Gizli şirket dokümanları üzerinde soru-cevap sistemi istiyorum; planla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines data privacy and egress boundary",
+      "Covers embedding and store selection",
+      "Covers chunking",
+      "Enforces access control before retrieval or generation",
+      "Defines RAG evaluation and hallucination measurement",
+      "Covers production readiness"
+    ],
+    "must_not": [
+      "Uses prompt instructions as authorization",
+      "Sends confidential content externally without approval"
+    ]
+  }
+}

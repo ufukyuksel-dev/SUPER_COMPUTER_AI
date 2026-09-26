@@ -1,0 +1,13 @@
+spring:
+  ai:
+    mcp:
+      server:
+        stdio: true
+  main:
+    web-application-type: none
+    banner-mode: off
+logging:
+  pattern:
+    console:
+  file:
+    name: ${adb-mcp.state-dir}/logs/adb-mcp-server.log

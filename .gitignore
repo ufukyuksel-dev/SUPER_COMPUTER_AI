@@ -1,0 +1,45 @@
+# Pipeline work areas (never part of the repo)
+/output/
+/logs/
+/artifacts/
+/attachments/
+/workspace/
+
+# Secrets and local config — real values live in ~/.config/super-computer-ai/
+.env
+.env.*
+!.env.example
+**/service-account*.json
+**/client_secret*.json
+**/client-secret*.json
+**/developer-token*
+**/google-ads.yaml
+**/system-user-token*.txt
+
+# Build and dependency output
+**/.venv/
+**/node_modules/
+**/dist/
+**/build/
+**/.gradle/
+**/target/
+*.jar
+!**/gradle/wrapper/gradle-wrapper.jar
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Browser profiles and automation caches
+**/chrome-profile*/
+.playwright-mcp/
+
+# Editor / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# Local runtime output of tools
+tools/dataset-collector/data/
+tools/dataset-collector/state/

@@ -1,0 +1,28 @@
+{
+  "id": "ai-research-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Map the data sources, terms of service, and constraints for an unfamiliar public-forum analytics domain.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-research",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Produces a domain brief covering actors, data sources, constraints, ToS or license, and risks",
+      "Cites primary sources with access dates"
+    ],
+    "must_not": [
+      "Turns the domain brief into an architecture decision",
+      "Invents unavailable terms"
+    ]
+  }
+}

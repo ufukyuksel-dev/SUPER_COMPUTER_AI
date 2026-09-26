@@ -1,0 +1,10 @@
+# Source registry for the collector tool. Credentials live in the environment
+# (auth_env names the variable); never write tokens into this file.
+sources: []
+# Example:
+#   - id: support-forum
+#     type: api
+#     endpoint: https://example.com/api/threads
+#     rate_limit_per_min: 30
+#     license_note: "verified YYYY-MM-DD via ai-research task <ref>"
+#     auth_env: SUPPORT_FORUM_TOKEN

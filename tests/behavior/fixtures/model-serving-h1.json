@@ -1,0 +1,29 @@
+{
+  "id": "model-serving-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Trafiği bilinmeyen bir model endpoint'i için topoloji ve SLO öner.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Asks for or bounds arrival rate, concurrency, payload, and latency objectives",
+      "Provides options conditional on load tests",
+      "Includes overload and backpressure behavior"
+    ],
+    "must_not": [
+      "Invents traffic",
+      "Promises an SLO without measurement"
+    ]
+  }
+}

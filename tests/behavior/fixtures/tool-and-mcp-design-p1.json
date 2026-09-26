@@ -1,0 +1,29 @@
+{
+  "id": "tool-and-mcp-design-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Scope, audit ve prompt-injection savunması olan bir MCP tool şeması tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "tool-and-mcp-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses narrow typed inputs and outputs",
+      "Defines scope checks, approvals, audit, redaction, and error behavior",
+      "Treats tool content as untrusted"
+    ],
+    "must_not": [
+      "Creates an unbounded execute-anything tool",
+      "Logs secrets"
+    ]
+  }
+}

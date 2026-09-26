@@ -1,0 +1,28 @@
+{
+  "id": "role-architect",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "agent_role": "architect",
+  "prompt": "Onaylı gereksinimler: gizli şirket dokümanları şirket dışına çıkmayacak, 50 eşzamanlı kullanıcıda p95 yanıt 2 saniyenin altında olacak ve tek RTX 4090 kullanılacak. Onaylı araştırma notu: şirket içi vektör veritabanı mevcut. Mimariyi, uygulama planını, kabul kriterlerini ve eval planını çıkar; ardından başlangıç kodunu da yaz.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "workspace_changes": "forbidden",
+    "evidence_required": [
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Runs a capability gap-scan",
+      "Names task-specific specialist skills",
+      "Produces architecture, plan, acceptance criteria, and eval plan"
+    ],
+    "must_not": [
+      "Implements code",
+      "Invents current research facts"
+    ]
+  }
+}

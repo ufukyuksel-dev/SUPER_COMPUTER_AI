@@ -1,0 +1,27 @@
+{
+  "id": "rag-engineering-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Uzun agent konuşmalarında context budget ve compaction stratejisi tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "context-engineering",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes general context budgeting to context-engineering",
+      "Defines context constraints"
+    ],
+    "must_not": [
+      "Builds a vector store"
+    ],
+    "skill_not_invoked": "rag-engineering"
+  }
+}

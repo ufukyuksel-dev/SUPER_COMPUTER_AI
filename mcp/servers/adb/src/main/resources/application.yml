@@ -1,0 +1,52 @@
+spring:
+  ai:
+    mcp:
+      server:
+        name: adb-mcp-server
+        version: 1.0.0
+        type: SYNC
+  profiles:
+    active: stdio
+# Runtime state lives outside the working directory. Any source may set adb-mcp.state-dir (absolute or ~/);
+# StateDirEnvironmentPostProcessor makes it private (0700) before logging starts.
+adb-mcp:
+  state-dir: ${ADB_MCP_STATE_DIR:${user.home}/.local/state/super-computer-ai/adb}
+
+adb:
+  path: auto
+  default-timeout-ms: 30000
+  video-timeout-ms: 180000
+
+scrcpy:
+  path: auto
+  default-max-size: 1024
+  default-video-bit-rate: 8M
+  recording-dir: ${adb-mcp.state-dir}/artifacts/videos
+
+artifacts:
+  base-dir: ${adb-mcp.state-dir}/artifacts
+  screenshots-dir: screenshots
+  videos-dir: videos
+  ui-dumps-dir: ui-dumps
+  pulled-files-dir: pulled
+  max-age-hours: 24
+  max-total-size-mb: 2048
+
+security:
+  dangerous-tools:
+    am-broadcast:
+      enabled: true
+    push-file:
+      enabled: true
+    scrcpy-connect-tcpip:
+      enabled: true
+    force-stop:
+      enabled: true
+  file-transfer:
+    host-allowed-paths:
+      - "${ADB_MCP_TRANSFERS_DIR:${adb-mcp.state-dir}/transfers}"
+    device-allowed-paths:
+      - "/sdcard/"
+      - "/data/local/tmp/"
+  intent-allowlist:
+    enabled: false

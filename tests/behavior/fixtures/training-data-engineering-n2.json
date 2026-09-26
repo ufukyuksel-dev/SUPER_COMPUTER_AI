@@ -1,0 +1,26 @@
+{
+  "id": "training-data-engineering-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Her gece çalışan bir veri toplama cron işi kur ve tetikleyicilerini ayarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-automation",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes scheduling and triggers to ai-automation"
+    ],
+    "must_not": [
+      "Produces a dataset curation plan"
+    ],
+    "skill_not_invoked": "training-data-engineering"
+  }
+}

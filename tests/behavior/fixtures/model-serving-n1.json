@@ -1,0 +1,27 @@
+{
+  "id": "model-serving-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Seçilmiş modelin 24 GB GPU'ya sığıp sığmayacağını KV-cache dahil hesapla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes VRAM and quantization math to inference-optimization",
+      "Lists required memory inputs"
+    ],
+    "must_not": [
+      "Chooses a serving engine"
+    ],
+    "skill_not_invoked": "model-serving"
+  }
+}

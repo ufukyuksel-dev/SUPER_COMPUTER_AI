@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>S38</title></head><body>
+<form action="ok.html"><label>From <input name="from" id="from"></label><label>To <input name="to"></label>
+<button>Search flights</button></form>
+<script>document.getElementById('from').addEventListener('input', e =>
+  history.replaceState(null, '', '?from=' + encodeURIComponent(e.target.value)));</script></body></html>

@@ -1,0 +1,30 @@
+{
+  "id": "tool-and-mcp-design-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Harici içeriği alan ve yazma yapan bir tool için güvenlik sınırları belirle.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "tool-and-mcp-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Separates read from write capabilities",
+      "Requires explicit approval for consequential writes",
+      "Validates and redacts untrusted input",
+      "Creates auditable idempotent operations"
+    ],
+    "must_not": [
+      "Allows prompt content to widen scope",
+      "Uses hidden side effects"
+    ]
+  }
+}

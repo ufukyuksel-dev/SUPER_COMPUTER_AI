@@ -1,0 +1,5 @@
+# skill-description-sha256: f9a570449badf487c1e460bb84381dc6df83c8edbd8c8cb233fad7379d9b63c5
+interface:
+  display_name: "Training Data Engineering"
+  short_description: "Curate quality post-training datasets on a budget"
+  default_prompt: "Use $training-data-engineering to curate a rights-clean, leakage-safe training dataset with quality gates."

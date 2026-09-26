@@ -1,0 +1,29 @@
+{
+  "id": "training-data-engineering-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Generate synthetic preference pairs (prompt/chosen/rejected) to improve refusal quality; set up the generation pipeline.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses tiered generation: deterministic code, cheap model, strong teacher, strong judge or human sample",
+      "Keeps validation data out of generator and judge context",
+      "Defines a versioned model-routing config with cost caps",
+      "Requires human approval before publish or training start"
+    ],
+    "must_not": [
+      "Uses the same model/family as both generator and judge without noting the risk"
+    ]
+  }
+}

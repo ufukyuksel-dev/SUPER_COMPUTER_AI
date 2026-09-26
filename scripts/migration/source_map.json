@@ -1,0 +1,130 @@
+{
+  "_comment": [
+    "Public source map for the 2026-09 consolidation (plan §4.4.1a). Repository-relative paths only:",
+    "no machine paths, account data or MCP instance names. scripts/install.py reads it (stdlib JSON) to adopt",
+    "links created by the legacy installers; '~' in manual-copies means the installation HOME."
+  ],
+  "schema_version": 1,
+  "sources": {
+    "AI_Developer": {
+      "skills": {
+        "from": ".agents/skills/{name}",
+        "to": "skills/ai-engineering/{name}",
+        "names": [
+          "ai-automation",
+          "ai-research",
+          "ai-system-design",
+          "context-engineering",
+          "eval-harness",
+          "implementation-verification",
+          "inference-optimization",
+          "model-selection-hf",
+          "model-serving",
+          "production-ops",
+          "rag-engineering",
+          "tool-and-mcp-design",
+          "training-data-engineering",
+          "training-peft"
+        ]
+      },
+      "roles": {
+        "claude": {
+          "from": ".claude/agents/{name}.md",
+          "to": "agents/claude/{name}.md"
+        },
+        "codex": {
+          "from": ".codex/agents/{name}.toml",
+          "to": "agents/codex/{name}.toml"
+        },
+        "names": [
+          "architect",
+          "dataset-curator",
+          "evaluator",
+          "implementer",
+          "researcher"
+        ]
+      },
+      "files": {
+        "scripts/validate_skills.py": "scripts/skills/validate_skills.py",
+        "scripts/update_openai_metadata.py": "scripts/update_openai_metadata.py",
+        "scripts/run_behavior_tests.py": "scripts/run_behavior_tests.py",
+        "scripts/collector/": "tools/dataset-collector/collector/",
+        "datasets/config/": "tools/dataset-collector/config/",
+        "tests/behavior/": "tests/behavior/",
+        "tests/collector/test_collector.py": "tools/dataset-collector/tests/test_collector.py"
+      }
+    },
+    "AI_SKILLS": {
+      "skills": {
+        "from": "{name}",
+        "to": "skills/{category}/{name}",
+        "names": {
+          "meta-ads-management": "advertising",
+          "tiktok-ads-management": "advertising",
+          "mobile-store-release": "mobile",
+          "store-listing-assets": "mobile",
+          "suno-music-generator": "media"
+        }
+      }
+    },
+    "manual-copies": {
+      "skills": {
+        "jev-browser": {
+          "to": "skills/browser/jev-browser",
+          "source": "~/.claude/skills/jev-browser"
+        },
+        "mobile-ui-review": {
+          "to": "skills/mobile/mobile-ui-review",
+          "sources": [
+            "~/.claude/skills/Mobile_UI_Review",
+            "~/.codex/skills/Mobile_UI_Review"
+          ]
+        }
+      }
+    },
+    "GoogleAds": {
+      "skills": {
+        "google-ads-management": {
+          "to": "skills/advertising/google-ads-management",
+          "derived_from": "docs/ads-instructions.md"
+        }
+      },
+      "server": {
+        "from": "google-ads-mcp",
+        "to": "mcp/servers/google-ads",
+        "base_revision": "b4ba9fa"
+      },
+      "remote": {
+        "meta-ads/auth_headers.py": "mcp/remote/meta-ads/auth_headers.py"
+      }
+    },
+    "PremiereProMCP": {
+      "skills": {
+        "premiere-pro-mcp": {
+          "to": "skills/media/premiere-pro-mcp",
+          "derived_from": "skills/premiere-pro-mcp/SKILL.md"
+        }
+      },
+      "server": {
+        "to": "mcp/servers/premiere-pro",
+        "base_revision": "5b6281a",
+        "upstream": "https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP",
+        "upstream_revision": "ee31c3d"
+      }
+    },
+    "JevAI": {
+      "server": {
+        "from": ".",
+        "to": "mcp/servers/jev",
+        "note": "not a git repository; allowlist = src/, tests/ (no __pycache__/.DS_Store), pyproject.toml, uv.lock, .python-version"
+      }
+    },
+    "ADB_MCP_SERVER": {
+      "server": {
+        "from": ".",
+        "to": "mcp/servers/adb",
+        "note": "real source is the IdeaProjects copy, not a git repository; allowlist = src/, build.gradle.kts, settings.gradle.kts, gradlew, gradlew.bat, gradle/wrapper/, .gitattributes, .gitignore; DOCS/ADB_MCP_Server_MVP_Spec_v3_6.docx -> docs/"
+      }
+    }
+  }
+}

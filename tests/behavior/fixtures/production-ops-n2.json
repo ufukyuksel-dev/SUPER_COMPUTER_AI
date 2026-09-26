@@ -1,0 +1,27 @@
+{
+  "id": "production-ops-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Choose a serving engine and topology for a model that has not yet been deployed.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes serving design to model-serving",
+      "Requests workload and SLO inputs"
+    ],
+    "must_not": [
+      "Writes an incident runbook first"
+    ],
+    "skill_not_invoked": "production-ops"
+  }
+}

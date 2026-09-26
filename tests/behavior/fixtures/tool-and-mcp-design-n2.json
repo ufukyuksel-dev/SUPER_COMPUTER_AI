@@ -1,0 +1,27 @@
+{
+  "id": "tool-and-mcp-design-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Create production dashboards, drift alerts, incident response, and rollback for a deployed model.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes operations to production-ops",
+      "Defines operational objectives"
+    ],
+    "must_not": [
+      "Redesigns tool schemas"
+    ],
+    "skill_not_invoked": "tool-and-mcp-design"
+  }
+}

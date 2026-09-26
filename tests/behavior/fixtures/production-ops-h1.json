@@ -1,0 +1,29 @@
+{
+  "id": "production-ops-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Canary rollout sırasında kalite drift'i ve maliyet sıçraması var; karar ver.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses predeclared rollback and promotion gates",
+      "Correlates quality, traffic, latency, and cost evidence",
+      "Preserves a recoverable path"
+    ],
+    "must_not": [
+      "Waits without a bound",
+      "Promotes despite failed gates"
+    ]
+  }
+}

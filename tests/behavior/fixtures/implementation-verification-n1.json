@@ -1,0 +1,27 @@
+{
+  "id": "implementation-verification-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Yeni bir model özelliği için hangi metrikleri ve eval setini kullanacağımızı tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "eval-harness",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes metric design to eval-harness",
+      "Produces an eval-design brief"
+    ],
+    "must_not": [
+      "Claims an implementation was executed"
+    ],
+    "skill_not_invoked": "implementation-verification"
+  }
+}

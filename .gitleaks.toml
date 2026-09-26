@@ -1,0 +1,6 @@
+# gitleaks configuration: default ruleset. No path allowlist — .env.example files are scanned like
+# everything else, because a file name does not guarantee its content is safe.
+title = "SUPER_COMPUTER_AI"
+
+[extend]
+useDefault = true

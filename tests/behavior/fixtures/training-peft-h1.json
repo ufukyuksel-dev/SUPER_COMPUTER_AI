@@ -1,0 +1,29 @@
+{
+  "id": "training-peft-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Küçük ve dengesiz bir veri setinde QLoRA yap; sızıntı ve overfitting riskini yönet.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-peft",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Verifies the handoff's split isolation before training (delegating fixes to training-data-engineering)",
+      "Uses staged checkpoints and held-out evaluation",
+      "Adds stop or rollback gates"
+    ],
+    "must_not": [
+      "Tunes only for training loss",
+      "Leaks validation examples"
+    ]
+  }
+}

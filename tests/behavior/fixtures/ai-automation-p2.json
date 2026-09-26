@@ -1,0 +1,29 @@
+{
+  "id": "ai-automation-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design an autonomous job with resumable checkpoints, backoff, dead-letter handling, and a kill switch.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-automation",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Models state transitions and replay safety",
+      "Defines bounded retries and failure ownership",
+      "Includes observability and manual stop or resume"
+    ],
+    "must_not": [
+      "Runs forever without a budget",
+      "Hides failed items"
+    ]
+  }
+}

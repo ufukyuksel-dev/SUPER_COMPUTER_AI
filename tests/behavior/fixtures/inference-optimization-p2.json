@@ -1,0 +1,29 @@
+{
+  "id": "inference-optimization-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Reduce decode latency with batching, speculative decoding, and attention optimization while protecting output quality.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Separates prefill and decode bottlenecks",
+      "Treats optimization claims as hypotheses to benchmark",
+      "Defines latency, throughput, memory, and quality measurements"
+    ],
+    "must_not": [
+      "Promises a universal speedup",
+      "Selects a different model without need"
+    ]
+  }
+}

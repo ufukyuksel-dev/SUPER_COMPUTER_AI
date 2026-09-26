@@ -1,0 +1,29 @@
+{
+  "id": "tool-and-mcp-design-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Decide whether a reusable capability belongs in a skill, plugin, subagent, hook, harness, or MCP server.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "tool-and-mcp-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Distinguishes knowledge workflow, packaging, delegation, lifecycle enforcement, evaluation, and live capabilities",
+      "Explains trade-offs and composition",
+      "Selects the smallest suitable surface"
+    ],
+    "must_not": [
+      "Treats all surfaces as aliases",
+      "Uses a business-domain checklist"
+    ]
+  }
+}

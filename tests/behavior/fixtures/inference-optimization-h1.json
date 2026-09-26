@@ -1,0 +1,29 @@
+{
+  "id": "inference-optimization-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Aynı quantization ayarı iki benchmark'ta zıt sonuç veriyor; üretim kararı ver.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Requires workload-matched measurement",
+      "Explains confounders and uncertainty",
+      "Sets a reproducible benchmark gate"
+    ],
+    "must_not": [
+      "Picks the prettier benchmark",
+      "States estimates as measurements"
+    ]
+  }
+}

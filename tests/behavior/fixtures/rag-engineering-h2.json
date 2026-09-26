@@ -1,0 +1,29 @@
+{
+  "id": "rag-engineering-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Vector-store access is unavailable during diagnosis.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "rag-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "States the degradation boundary",
+      "Uses available retrieval logs or a small local controlled corpus",
+      "Labels untested store claims unverified"
+    ],
+    "must_not": [
+      "Invents index statistics",
+      "Claims the production retrieval path was tested"
+    ]
+  }
+}

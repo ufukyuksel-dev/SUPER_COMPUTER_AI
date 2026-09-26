@@ -1,0 +1,543 @@
+{
+  "recorded_at": "2026-08-24",
+  "platform": "claude",
+  "command": "claude -p --no-session-persistence --permission-mode plan --output-format stream-json --verbose 'Use $probe-skill. Reply exactly: PROBE-OK'",
+  "cli_version": "2.1.238 (Claude Code)",
+  "exit_code": 0,
+  "events": [
+    {
+      "type": "system",
+      "subtype": "hook_started",
+      "hook_id": "ab215c89-a2f4-482e-87ad-5937159a4338",
+      "hook_name": "SessionStart:startup",
+      "hook_event": "SessionStart",
+      "uuid": "cd8b6b8d-7ea4-4fe1-821c-ae028c32c877",
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed"
+    },
+    {
+      "type": "system",
+      "subtype": "hook_response",
+      "hook_id": "ab215c89-a2f4-482e-87ad-5937159a4338",
+      "hook_name": "SessionStart:startup",
+      "hook_event": "SessionStart",
+      "output": "{\n  \"hookSpecificOutput\": {\n    \"hookEventName\": \"SessionStart\",\n    \"additionalContext\": \"<EXTREMELY_IMPORTANT>\\nYou have superpowers.\\n\\n**Below is the full content of your 'superpowers:using-superpowers' skill - your introduction to using skills. For all other skills, use the 'Skill' tool:**\\n\\n---\\nname: using-superpowers\\ndescription: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions\\n---\\n\\n<SUBAGENT-STOP>\\nIf you were dispatched as a subagent to execute a specific task, ignore this skill.\\n</SUBAGENT-STOP>\\n\\n<EXTREMELY-IMPORTANT>\\nIf you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.\\n\\nIF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.\\n\\nThis is not negotiable. You cannot rationalize your way out of this.\\n</EXTREMELY-IMPORTANT>\\n\\n## The Rule\\n\\n**Invoke relevant or requested skills BEFORE any response or action** — including clarifying questions, exploring the codebase, or checking files. If it turns out wrong for the situation, you don't have to use it.\\n\\n**Before entering plan mode:** if you haven't already brainstormed, invoke the brainstorming skill first.\\n\\nThen announce \\\"Using [skill] to [purpose]\\\" and follow the skill exactly. If it has a checklist, create a todo per item.\\n\\n## Skill Priority\\n\\nWhen multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.\\n\\n- \\\"Let's build X\\\" → superpowers:brainstorming first, then implementation skills.\\n- \\\"Fix this bug\\\" → superpowers:systematic-debugging first, then domain skills.\\n\\n## Red Flags\\n\\nThese thoughts mean STOP—you're rationalizing:\\n\\n| Thought | Reality |\\n|---------|---------|\\n| \\\"This is just a simple question\\\" | Questions are tasks. Check for skills. |\\n| \\\"I need more context first\\\" | Skill check comes BEFORE clarifying questions. |\\n| \\\"Let me explore the codebase first\\\" | Skills tell you HOW to explore. Check first. |\\n| \\\"I can check git/files quickly\\\" | Files lack conversation context. Check for skills. |\\n| \\\"Let me gather information first\\\" | Skills tell you HOW to gather information. |\\n| \\\"This doesn't need a formal skill\\\" | If a skill exists, use it. |\\n| \\\"I remember this skill\\\" | Skills evolve. Read current version. |\\n| \\\"This doesn't count as a task\\\" | Action = task. Check for skills. |\\n| \\\"The skill is overkill\\\" | Simple things become complex. Use it. |\\n| \\\"I'll just do this one thing first\\\" | Check BEFORE doing anything. |\\n| \\\"This feels productive\\\" | Undisciplined action wastes time. Skills prevent this. |\\n| \\\"I know what that means\\\" | Knowing the concept ≠ using the skill. Invoke it. |\\n\\n## Platform Adaptation\\n\\nIf your harness appears here, read its reference file for special instructions:\\n\\n- Codex: `references/codex-tools.md`\\n- Pi: `references/pi-tools.md`\\n- Antigravity: `references/antigravity-tools.md`\\n- Hermes Agent: `references/hermes-tools.md`\\n\\n## User Instructions\\n\\nUser instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.\\n</EXTREMELY_IMPORTANT>\"\n  }\n}\n",
+      "stdout": "{\n  \"hookSpecificOutput\": {\n    \"hookEventName\": \"SessionStart\",\n    \"additionalContext\": \"<EXTREMELY_IMPORTANT>\\nYou have superpowers.\\n\\n**Below is the full content of your 'superpowers:using-superpowers' skill - your introduction to using skills. For all other skills, use the 'Skill' tool:**\\n\\n---\\nname: using-superpowers\\ndescription: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions\\n---\\n\\n<SUBAGENT-STOP>\\nIf you were dispatched as a subagent to execute a specific task, ignore this skill.\\n</SUBAGENT-STOP>\\n\\n<EXTREMELY-IMPORTANT>\\nIf you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.\\n\\nIF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.\\n\\nThis is not negotiable. You cannot rationalize your way out of this.\\n</EXTREMELY-IMPORTANT>\\n\\n## The Rule\\n\\n**Invoke relevant or requested skills BEFORE any response or action** — including clarifying questions, exploring the codebase, or checking files. If it turns out wrong for the situation, you don't have to use it.\\n\\n**Before entering plan mode:** if you haven't already brainstormed, invoke the brainstorming skill first.\\n\\nThen announce \\\"Using [skill] to [purpose]\\\" and follow the skill exactly. If it has a checklist, create a todo per item.\\n\\n## Skill Priority\\n\\nWhen multiple skills apply, process skills come first — they set the approach, then implementation skills (frontend-design, etc.) carry it out. Brainstorming and systematic-debugging are Superpowers' most common process skills, but the rule holds for any of them.\\n\\n- \\\"Let's build X\\\" → superpowers:brainstorming first, then implementation skills.\\n- \\\"Fix this bug\\\" → superpowers:systematic-debugging first, then domain skills.\\n\\n## Red Flags\\n\\nThese thoughts mean STOP—you're rationalizing:\\n\\n| Thought | Reality |\\n|---------|---------|\\n| \\\"This is just a simple question\\\" | Questions are tasks. Check for skills. |\\n| \\\"I need more context first\\\" | Skill check comes BEFORE clarifying questions. |\\n| \\\"Let me explore the codebase first\\\" | Skills tell you HOW to explore. Check first. |\\n| \\\"I can check git/files quickly\\\" | Files lack conversation context. Check for skills. |\\n| \\\"Let me gather information first\\\" | Skills tell you HOW to gather information. |\\n| \\\"This doesn't need a formal skill\\\" | If a skill exists, use it. |\\n| \\\"I remember this skill\\\" | Skills evolve. Read current version. |\\n| \\\"This doesn't count as a task\\\" | Action = task. Check for skills. |\\n| \\\"The skill is overkill\\\" | Simple things become complex. Use it. |\\n| \\\"I'll just do this one thing first\\\" | Check BEFORE doing anything. |\\n| \\\"This feels productive\\\" | Undisciplined action wastes time. Skills prevent this. |\\n| \\\"I know what that means\\\" | Knowing the concept ≠ using the skill. Invoke it. |\\n\\n## Platform Adaptation\\n\\nIf your harness appears here, read its reference file for special instructions:\\n\\n- Codex: `references/codex-tools.md`\\n- Pi: `references/pi-tools.md`\\n- Antigravity: `references/antigravity-tools.md`\\n- Hermes Agent: `references/hermes-tools.md`\\n\\n## User Instructions\\n\\nUser instructions (CLAUDE.md, AGENTS.md, GEMINI.md, etc, direct requests) take precedence over skills, which in turn override default behavior. Only skip skill workflows or instructions when your human partner has explicitly told you to.\\n</EXTREMELY_IMPORTANT>\"\n  }\n}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "outcome": "success",
+      "uuid": "c897e33b-720b-4951-a3aa-3e5659783f15",
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed"
+    },
+    {
+      "type": "system",
+      "subtype": "init",
+      "cwd": "/workspace/AI_Developer",
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "tools": [
+        "Task",
+        "Bash",
+        "CronCreate",
+        "CronDelete",
+        "CronList",
+        "DesignSync",
+        "Edit",
+        "EnterWorktree",
+        "ExitWorktree",
+        "ListAgents",
+        "Monitor",
+        "NotebookEdit",
+        "PushNotification",
+        "Read",
+        "RemoteTrigger",
+        "ReportFindings",
+        "ScheduleWakeup",
+        "SendMessage",
+        "Skill",
+        "TaskOutput",
+        "TaskStop",
+        "ToolSearch",
+        "WebFetch",
+        "WebSearch",
+        "Workflow",
+        "Write"
+      ],
+      "mcp_servers": [
+        {
+          "name": "ai-orchestration",
+          "status": "failed"
+        },
+        {
+          "name": "claude.ai HigsField",
+          "status": "pending"
+        },
+        {
+          "name": "claude.ai Google Drive",
+          "status": "needs-auth"
+        },
+        {
+          "name": "claude.ai Figma",
+          "status": "pending"
+        },
+        {
+          "name": "claude.ai Google Calendar",
+          "status": "needs-auth"
+        },
+        {
+          "name": "claude.ai Gmail",
+          "status": "needs-auth"
+        }
+      ],
+      "model": "claude-opus-5[1m]",
+      "permissionMode": "plan",
+      "slash_commands": [
+        "adding-an-mcp-tool",
+        "changing-code-safely",
+        "debugging-this-project",
+        "probe-skill",
+        "deep-research",
+        "frontend-design:frontend-design",
+        "superpowers:brainstorming",
+        "superpowers:dispatching-parallel-agents",
+        "superpowers:executing-plans",
+        "superpowers:finishing-a-development-branch",
+        "superpowers:receiving-code-review",
+        "superpowers:requesting-code-review",
+        "superpowers:subagent-driven-development",
+        "superpowers:systematic-debugging",
+        "superpowers:test-driven-development",
+        "superpowers:using-git-worktrees",
+        "superpowers:using-superpowers",
+        "superpowers:verification-before-completion",
+        "superpowers:writing-plans",
+        "superpowers:writing-skills",
+        "document-skills:xlsx",
+        "document-skills:docx",
+        "document-skills:pptx",
+        "document-skills:pdf",
+        "example-skills:algorithmic-art",
+        "example-skills:brand-guidelines",
+        "example-skills:canvas-design",
+        "example-skills:doc-coauthoring",
+        "example-skills:frontend-design",
+        "example-skills:internal-comms",
+        "example-skills:mcp-builder",
+        "example-skills:skill-creator",
+        "example-skills:slack-gif-creator",
+        "example-skills:theme-factory",
+        "example-skills:web-artifacts-builder",
+        "example-skills:webapp-testing",
+        "design-sync",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "schedule",
+        "claude-api",
+        "run",
+        "run-skill-generator",
+        "agents",
+        "auto-mode-setup",
+        "autocompact",
+        "clear",
+        "color",
+        "compact",
+        "config",
+        "context",
+        "effort",
+        "fast",
+        "heapdump",
+        "init",
+        "mcp",
+        "import",
+        "model",
+        "__remote-workflow",
+        "workflow-launch-exec",
+        "reload-skills",
+        "rename",
+        "ultrareview",
+        "security-review",
+        "usage-credits",
+        "extra-usage",
+        "usage",
+        "insights",
+        "recap",
+        "goal",
+        "design",
+        "design-consent",
+        "design-revoke",
+        "team-onboarding"
+      ],
+      "terminal_slash_commands": [
+        "doctor",
+        "color"
+      ],
+      "apiKeySource": "none",
+      "claude_code_version": "2.1.238",
+      "output_style": "default",
+      "agents": [
+        "claude",
+        "Explore",
+        "general-purpose",
+        "Plan",
+        "statusline-setup"
+      ],
+      "skills": [
+        "adding-an-mcp-tool",
+        "changing-code-safely",
+        "debugging-this-project",
+        "probe-skill",
+        "deep-research",
+        "frontend-design:frontend-design",
+        "superpowers:brainstorming",
+        "superpowers:dispatching-parallel-agents",
+        "superpowers:executing-plans",
+        "superpowers:finishing-a-development-branch",
+        "superpowers:receiving-code-review",
+        "superpowers:requesting-code-review",
+        "superpowers:subagent-driven-development",
+        "superpowers:systematic-debugging",
+        "superpowers:test-driven-development",
+        "superpowers:using-git-worktrees",
+        "superpowers:using-superpowers",
+        "superpowers:verification-before-completion",
+        "superpowers:writing-plans",
+        "superpowers:writing-skills",
+        "document-skills:xlsx",
+        "document-skills:docx",
+        "document-skills:pptx",
+        "document-skills:pdf",
+        "example-skills:algorithmic-art",
+        "example-skills:brand-guidelines",
+        "example-skills:canvas-design",
+        "example-skills:doc-coauthoring",
+        "example-skills:frontend-design",
+        "example-skills:internal-comms",
+        "example-skills:mcp-builder",
+        "example-skills:skill-creator",
+        "example-skills:slack-gif-creator",
+        "example-skills:theme-factory",
+        "example-skills:web-artifacts-builder",
+        "example-skills:webapp-testing",
+        "design-sync",
+        "dataviz",
+        "update-config",
+        "verify",
+        "debug",
+        "code-review",
+        "simplify",
+        "batch",
+        "fewer-permission-prompts",
+        "doctor",
+        "loop",
+        "schedule",
+        "claude-api",
+        "run",
+        "run-skill-generator"
+      ],
+      "plugins": [
+        {
+          "name": "frontend-design",
+          "path": "/workspace/user/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown",
+          "source": "frontend-design@claude-plugins-official"
+        },
+        {
+          "name": "superpowers",
+          "path": "/workspace/user/.claude/plugins/cache/claude-plugins-official/superpowers/6.3.0",
+          "source": "superpowers@claude-plugins-official",
+          "version": "6.3.0"
+        },
+        {
+          "name": "document-skills",
+          "path": "/workspace/user/.claude/plugins/cache/anthropic-agent-skills/document-skills/3b3fad96af16",
+          "source": "document-skills@anthropic-agent-skills"
+        },
+        {
+          "name": "example-skills",
+          "path": "/workspace/user/.claude/plugins/cache/anthropic-agent-skills/example-skills/3b3fad96af16",
+          "source": "example-skills@anthropic-agent-skills"
+        }
+      ],
+      "capabilities": [
+        "interrupt_receipt_v1",
+        "interrupt_cancel_queued_v1",
+        "msg_lifecycle_v1"
+      ],
+      "analytics_disabled": false,
+      "product_feedback_disabled": false,
+      "uuid": "5cbdfefa-2ed5-489c-b07c-8dfcb98a4d58",
+      "memory_paths": {
+        "auto": "/workspace/user/.claude/projects/-workspace-AI-Developer/memory/"
+      },
+      "messaging_socket_path": "/tmp/cc-socks/27297.sock",
+      "fast_mode_state": "off",
+      "fast_mode_disabled_reason": "sdk_opt_in_required"
+    },
+    {
+      "type": "assistant",
+      "message": {
+        "model": "claude-opus-5",
+        "id": "msg_011CeMiT9985tU7jZaNk5axb",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I'll invoke the probe skill."
+          }
+        ],
+        "stop_reason": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 17567,
+          "cache_read_input_tokens": 15608,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 17567
+          },
+          "output_tokens": 1,
+          "service_tier": "standard",
+          "inference_geo": "not_available"
+        },
+        "diagnostics": null,
+        "context_management": null
+      },
+      "parent_tool_use_id": null,
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "uuid": "97e74d56-d892-4b8a-8fad-af5b4d4777e9",
+      "timestamp": "2026-08-24T14:16:27.516Z",
+      "request_id": "req_011CeMiT6fHqGAUmHxvbwNVR"
+    },
+    {
+      "type": "assistant",
+      "message": {
+        "model": "claude-opus-5",
+        "id": "msg_011CeMiT9985tU7jZaNk5axb",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "toolu_014zHPgAGxUUYfxtz3BNJmax",
+            "name": "Skill",
+            "input": {
+              "skill": "probe-skill"
+            },
+            "caller": {
+              "type": "direct"
+            }
+          }
+        ],
+        "stop_reason": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 17567,
+          "cache_read_input_tokens": 15608,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 17567
+          },
+          "output_tokens": 1,
+          "service_tier": "standard",
+          "inference_geo": "not_available"
+        },
+        "diagnostics": null,
+        "context_management": null
+      },
+      "parent_tool_use_id": null,
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "uuid": "d22878a9-5b3e-49c5-8ae6-b19168f764ac",
+      "timestamp": "2026-08-24T14:16:27.760Z",
+      "request_id": "req_011CeMiT6fHqGAUmHxvbwNVR"
+    },
+    {
+      "type": "user",
+      "message": {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_014zHPgAGxUUYfxtz3BNJmax",
+            "content": "Launching skill: probe-skill"
+          }
+        ]
+      },
+      "parent_tool_use_id": null,
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "uuid": "99540e11-13c6-48ed-9591-3430120efb94",
+      "timestamp": "2026-08-24T14:16:27.773Z",
+      "tool_use_result": {
+        "success": true,
+        "commandName": "probe-skill"
+      }
+    },
+    {
+      "type": "user",
+      "message": {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Base directory for this skill: /workspace/AI_Developer/.claude/skills/probe-skill\n\n# Probe Skill\n\nReply exactly: `PROBE-OK`\n\n## Tool Requirements & Degradation\n\nNo tools are required. If this skill cannot be loaded, report discovery as unsupported instead of simulating success.\n"
+          }
+        ]
+      },
+      "parent_tool_use_id": null,
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "uuid": "defd544b-37db-4a2f-97a9-5df981337093",
+      "timestamp": "2026-08-24T14:16:27.772Z",
+      "isSynthetic": true
+    },
+    {
+      "type": "rate_limit_event",
+      "rate_limit_info": {
+        "status": "allowed",
+        "resetsAt": 1787589600,
+        "rateLimitType": "five_hour",
+        "overageStatus": "rejected",
+        "overageDisabledReason": "org_level_disabled_until",
+        "isUsingOverage": false
+      },
+      "uuid": "538a36cb-64c3-4d8b-907f-c95e619e21f5",
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed"
+    },
+    {
+      "type": "assistant",
+      "message": {
+        "model": "claude-opus-5",
+        "id": "msg_011CeMiTPbmtvf7aPvYX4azT",
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "PROBE-OK"
+          }
+        ],
+        "stop_reason": null,
+        "stop_sequence": null,
+        "stop_details": null,
+        "usage": {
+          "input_tokens": 2,
+          "cache_creation_input_tokens": 4368,
+          "cache_read_input_tokens": 33175,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 4368
+          },
+          "output_tokens": 1,
+          "service_tier": "standard",
+          "inference_geo": "not_available"
+        },
+        "diagnostics": null,
+        "context_management": null
+      },
+      "parent_tool_use_id": null,
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "uuid": "43601dff-3ef8-4e29-b53c-d8d909640f20",
+      "timestamp": "2026-08-24T14:16:30.314Z",
+      "request_id": "req_011CeMiTNo9p5usb6aqGSAR9"
+    },
+    {
+      "is_error": false,
+      "duration_api_ms": 6222,
+      "num_turns": 3,
+      "stop_reason": "end_turn",
+      "session_id": "7d9cfc5c-5b2e-4940-a36e-4b8b9ebc76ed",
+      "total_cost_usd": 0.24561149999999998,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 21935,
+        "cache_read_input_tokens": 48783,
+        "output_tokens": 74,
+        "output_tokens_details": {
+          "thinking_tokens": 0
+        },
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 21935,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 9,
+            "cache_read_input_tokens": 33175,
+            "cache_creation_input_tokens": 4368,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 4368
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "modelUsage": {
+        "claude-opus-5[1m]": {
+          "inputTokens": 4,
+          "outputTokens": 74,
+          "cacheReadInputTokens": 48783,
+          "cacheCreationInputTokens": 21935,
+          "webSearchRequests": 0,
+          "costUSD": 0.24561149999999998,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-opus-5",
+          "provider": "firstParty"
+        }
+      },
+      "permission_denials": [],
+      "terminal_reason": "completed",
+      "fast_mode_state": "off",
+      "fast_mode_disabled_reason": "sdk_opt_in_required",
+      "subagent_stats": {
+        "spawned": 0,
+        "requested": {
+          "background": 0,
+          "foreground": 0,
+          "unset": 0
+        },
+        "started_in_background": 0,
+        "max_depth": 0,
+        "spawned_by_subagents": 0,
+        "completed": 0,
+        "failed": 0,
+        "killed": {
+          "parent": 0,
+          "user": 0,
+          "system": 0
+        },
+        "refused": {
+          "depth_limit": 0,
+          "concurrency_limit": 0,
+          "budget": 0
+        },
+        "by_type": {}
+      },
+      "subtype": "success",
+      "api_error_status": null,
+      "result": "PROBE-OK",
+      "ttft_ms": 3453,
+      "ttft_stream_ms": 3088,
+      "time_to_request_ms": 18,
+      "type": "result",
+      "duration_ms": 6262,
+      "uuid": "32f448f1-1be4-49a4-b608-f372813220cc"
+    }
+  ]
+}

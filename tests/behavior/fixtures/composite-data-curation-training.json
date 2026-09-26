@@ -1,0 +1,31 @@
+{
+  "id": "composite-data-curation-training",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Elimdeki ham forum verisinden Türkçe SFT dataseti kürasyonu yap, training-ready raporunu üret ve QLoRA eğitim planına devret.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Curation chain: provenance, cleaning, dedup, splits, quality gates",
+      "Produces a handoff contract consumed by training-peft",
+      "training-peft owns method/config/checkpoint planning after handoff",
+      "Human approval gate before training starts"
+    ],
+    "must_not": [
+      "training-peft re-does sourcing or cleaning",
+      "Skips the gate report"
+    ],
+    "secondary_skill": "training-peft"
+  }
+}

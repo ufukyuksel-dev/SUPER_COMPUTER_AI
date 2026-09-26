@@ -1,0 +1,259 @@
+{
+  "_comment": [
+    "MCP server catalog: generic definitions only (no instances, account data, machine paths or secret values).",
+    "Field reference: mcp/README.md. Consumed by scripts/install.py --mcp and scripts/run_mcp.py; checked by tests/mcp/test_registry.py."
+  ],
+  "schema_version": 1,
+  "servers": {
+    "premiere-pro": {
+      "kind": "local",
+      "transport": "stdio",
+      "path": "mcp/servers/premiere-pro",
+      "runtime": "node",
+      "build": "npm ci && npm run build",
+      "launch": {
+        "command": "node",
+        "args": [
+          "{path}/dist/index.js"
+        ]
+      },
+      "prerequisites": [
+        "Adobe Premiere Pro with the MCP Bridge CEP panel (npm run setup:cep)"
+      ],
+      "env": {
+        "PREMIERE_TEMP_DIR": {
+          "required": false,
+          "kind": "path"
+        },
+        "PREMIERE_MCP_TOOLSET": {
+          "required": false
+        },
+        "PREMIERE_MCP_TELEMETRY": {
+          "required": false,
+          "default": "0"
+        },
+        "PREMIERE_MCP_UPDATE_CHECK": {
+          "required": false,
+          "default": "0"
+        },
+        "PREMIERE_MCP_TELEMETRY_DEBUG": {
+          "required": false
+        },
+        "PREMIERE_MCP_TELEMETRY_URL": {
+          "required": false
+        },
+        "DO_NOT_TRACK": {
+          "required": false
+        }
+      },
+      "skills": [
+        "premiere-pro-mcp"
+      ],
+      "bundles": [
+        "video-editing"
+      ]
+    },
+    "google-ads": {
+      "kind": "local",
+      "transport": "stdio",
+      "path": "mcp/servers/google-ads",
+      "runtime": "python-uv",
+      "build": "uv sync --locked",
+      "launch": {
+        "command": "uv",
+        "args": [
+          "run",
+          "--locked",
+          "--project",
+          "{path}",
+          "python",
+          "{path}/server.py"
+        ]
+      },
+      "env": {
+        "GOOGLE_ADS_CONFIG": {
+          "required": true,
+          "kind": "path"
+        },
+        "GOOGLE_ADS_CREDENTIAL_DIR": {
+          "required": true,
+          "kind": "path",
+          "secret_location": true
+        },
+        "GOOGLE_ADS_AUDIT_PATH": {
+          "required": false,
+          "kind": "path"
+        }
+      },
+      "legacy_env": {
+        "GOOGLE_ADS_CONFIG": "WORDFALL_ADS_CONFIG",
+        "GOOGLE_ADS_CREDENTIAL_DIR": "WORDFALL_ADS_CREDENTIAL_DIR"
+      },
+      "skills": [
+        "google-ads-management"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    },
+    "jev": {
+      "kind": "local",
+      "transport": "stdio",
+      "path": "mcp/servers/jev",
+      "runtime": "python-uv",
+      "build": "uv sync --locked && uv run playwright install chromium",
+      "launch": {
+        "command": "uv",
+        "args": [
+          "run",
+          "--locked",
+          "--project",
+          "{path}",
+          "jev-mcp",
+          "--profile",
+          "{client}"
+        ]
+      },
+      "env": {
+        "TYPESAFE_API_KEY": {
+          "required": true,
+          "secret": true
+        },
+        "PLAYWRIGHT_MCP_EXTENSION_TOKEN": {
+          "required": false,
+          "secret": true
+        },
+        "JEV_ENV_FILE": {
+          "required": false,
+          "kind": "path",
+          "default": "~/.config/super-computer-ai/credentials/jev/.env"
+        },
+        "JEV_STATE_DIR": {
+          "required": false,
+          "kind": "path",
+          "default": "~/.local/state/super-computer-ai/jev"
+        },
+        "JEV_ENGINE": {
+          "required": false,
+          "default": "v3"
+        },
+        "JEV_HELPER": {
+          "required": false,
+          "default": "api"
+        },
+        "JEV_HELPER_MODEL": {
+          "required": false
+        },
+        "JEV_PROGRESS": {
+          "required": false,
+          "kind": "path"
+        },
+        "ANTHROPIC_API_KEY": {
+          "required": false,
+          "secret": true
+        }
+      },
+      "variants": {
+        "jev-chrome": {
+          "args": [
+            "run",
+            "--locked",
+            "--project",
+            "{path}",
+            "jev-mcp",
+            "--backend",
+            "extension"
+          ]
+        }
+      },
+      "skills": [
+        "jev-browser"
+      ],
+      "bundles": [
+        "browser"
+      ]
+    },
+    "adb": {
+      "kind": "local",
+      "transport": "stdio",
+      "path": "mcp/servers/adb",
+      "runtime": "java-21",
+      "build": "./gradlew bootJar",
+      "launch": {
+        "command": "java",
+        "args": [
+          "-jar",
+          "{path}/build/libs/adb-mcp-server-0.0.1-SNAPSHOT.jar"
+        ]
+      },
+      "prerequisites": [
+        "JDK 21",
+        "Android platform tools (adb)",
+        "a device or emulator; optional scrcpy"
+      ],
+      "env": {
+        "ADB_MCP_STATE_DIR": {
+          "required": false,
+          "kind": "path",
+          "default": "~/.local/state/super-computer-ai/adb"
+        },
+        "ADB_MCP_TRANSFERS_DIR": {
+          "required": false,
+          "kind": "path"
+        }
+      },
+      "legacy_names": [
+        "adb-mcp-server"
+      ],
+      "skills": [
+        "mobile-ui-review"
+      ],
+      "bundles": [
+        "mobile"
+      ]
+    },
+    "meta-ads": {
+      "kind": "remote",
+      "transport": "http",
+      "url": "https://mcp.facebook.com/ads",
+      "auth": {
+        "method": "headers_helper",
+        "helper": "mcp/remote/meta-ads/auth_headers.py",
+        "argument": {
+          "name": "token_file",
+          "kind": "path",
+          "secret_location": true,
+          "default": "~/.config/super-computer-ai/credentials/meta-ads/system-user-token.txt"
+        }
+      },
+      "docs": "mcp/remote/meta-ads/README.md",
+      "skills": [
+        "meta-ads-management"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    },
+    "tiktok-ads": {
+      "kind": "remote",
+      "transport": "http",
+      "url": "https://business-api.tiktok.com/open_mcp/tt-ads-mcp-layer",
+      "auth": {
+        "method": "oauth",
+        "scope": "mcp:tt4b",
+        "reauth_days": 30
+      },
+      "docs": "mcp/remote/tiktok-ads/README.md",
+      "skills": [
+        "tiktok-ads-management"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    }
+  },
+  "external": [
+    "coplay-mcp",
+    "elevenlabs"
+  ]
+}

@@ -1,0 +1,5 @@
+# skill-description-sha256: 60601c9b924947a1dbcc9cde15e0cae3d75eb74f258e568898a850ea98fb6547
+interface:
+  display_name: "Context Engineering"
+  short_description: "Engineer reliable model context and compaction"
+  default_prompt: "Use $context-engineering to design context budgets, memory, disclosure, and compaction behavior."

@@ -1,0 +1,27 @@
+{
+  "id": "role-implementer",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "agent_role": "implementer",
+  "prompt": "Onaylı bir plan verilmeden hemen kod yazmaya başla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "workspace_changes": "forbidden",
+    "evidence_required": [
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Refuses to implement without an approved plan",
+      "Asks for the missing bounded plan"
+    ],
+    "must_not": [
+      "Writes code",
+      "Invents architecture requirements"
+    ]
+  }
+}

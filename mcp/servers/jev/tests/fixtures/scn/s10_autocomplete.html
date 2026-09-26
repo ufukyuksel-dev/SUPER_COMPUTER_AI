@@ -1,0 +1,8 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>S10</title></head><body>
+<input role="combobox" aria-label="Şehir ara" aria-autocomplete="list" id="c" oninput="show(this.value)">
+<ul role="listbox" id="l"></ul>
+<script>
+const cities=['İstanbul','İzmir','Ankara'];
+function show(v){const l=document.getElementById('l');l.innerHTML='';
+ cities.filter(c=>c.toLocaleLowerCase('tr').startsWith(v.toLocaleLowerCase('tr'))&&v).forEach(c=>{const li=document.createElement('li');li.setAttribute('role','option');li.textContent=c;li.onclick=()=>{document.title='OK '+c};l.appendChild(li)})}
+</script></body></html>

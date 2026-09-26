@@ -1,0 +1,27 @@
+{
+  "id": "eval-harness-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Uygulamanın bittiği iddia ediliyor; gerçek komutlarla uçtan uca kabul kriterlerini doğrula.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "implementation-verification",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes delivery verification to implementation-verification",
+      "Demands observed outputs"
+    ],
+    "must_not": [
+      "Redesigns the metric suite"
+    ],
+    "skill_not_invoked": "eval-harness"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "context-engineering-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Context dolduğunda hangi kanıtların korunacağını ve hangi ayrıntıların atılacağını belirle.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "context-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Preserves requirements, decisions, provenance, unresolved risks, and latest state",
+      "Drops reproducible noise before unique evidence",
+      "Marks lossy summaries"
+    ],
+    "must_not": [
+      "Drops acceptance criteria",
+      "Keeps raw logs at the expense of decisions"
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "schema_version": 2,
+  "skills": {
+    "ai-automation": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "ai-research": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "ai-system-design": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "context-engineering": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "eval-harness": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "google-ads-management": {
+      "category": "advertising",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    },
+    "implementation-verification": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "inference-optimization": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "jev-browser": {
+      "category": "browser",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude"
+      ],
+      "bundles": [
+        "browser"
+      ]
+    },
+    "meta-ads-management": {
+      "category": "advertising",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    },
+    "mobile-store-release": {
+      "category": "mobile",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "mobile"
+      ]
+    },
+    "mobile-ui-review": {
+      "category": "mobile",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "mobile"
+      ]
+    },
+    "model-selection-hf": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "model-serving": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "premiere-pro-mcp": {
+      "category": "media",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "video-editing"
+      ]
+    },
+    "production-ops": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "rag-engineering": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "store-listing-assets": {
+      "category": "mobile",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "mobile"
+      ]
+    },
+    "suno-music-generator": {
+      "category": "media",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "media"
+      ]
+    },
+    "tiktok-ads-management": {
+      "category": "advertising",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ads"
+      ]
+    },
+    "tool-and-mcp-design": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "training-data-engineering": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    },
+    "training-peft": {
+      "category": "ai-engineering",
+      "status": "active",
+      "profile": "strict",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "ai-engineering"
+      ]
+    }
+  }
+}

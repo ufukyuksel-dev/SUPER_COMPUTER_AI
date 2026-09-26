@@ -1,0 +1,5 @@
+# skill-description-sha256: 2ab59733c0fae0342370eab3a146bccac9c8ed99c1e25dda5f72a28ea5e61a85
+interface:
+  display_name: "Model Selection HF"
+  short_description: "Select and verify Hugging Face model candidates"
+  default_prompt: "Use $model-selection-hf to select and verify models against task, hardware, budget, access, and license constraints."

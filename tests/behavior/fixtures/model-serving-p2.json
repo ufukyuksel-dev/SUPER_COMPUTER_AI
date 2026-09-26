@@ -1,0 +1,29 @@
+{
+  "id": "model-serving-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design serving-time multi-provider routing with cache, retry, fallback, and bounded failure behavior.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Separates routing, cache, retry, and fallback decisions",
+      "Prevents retry storms and unsafe cache keys",
+      "Defines serving-level SLOs"
+    ],
+    "must_not": [
+      "Turns post-deploy incident response into serving configuration",
+      "Ignores idempotency"
+    ]
+  }
+}

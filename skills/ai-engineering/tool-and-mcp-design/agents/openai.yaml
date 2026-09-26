@@ -1,0 +1,5 @@
+# skill-description-sha256: dc5596247102af196b3e48b109eab1ed8fbacf91033ab83bdc2bd93d50990cf7
+interface:
+  display_name: "Tool and MCP Design"
+  short_description: "Design secure tools, MCP servers, and agent surfaces"
+  default_prompt: "Use $tool-and-mcp-design to design bounded tools, MCP servers, and the right reusable agent surface."

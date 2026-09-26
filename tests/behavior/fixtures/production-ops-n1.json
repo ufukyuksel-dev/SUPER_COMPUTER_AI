@@ -1,0 +1,27 @@
+{
+  "id": "production-ops-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Her gece çalışan veri alım ve AI işleme pipeline'ı için trigger ve approval gate tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-automation",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes scheduled autonomous work to ai-automation",
+      "Defines unattended-run constraints"
+    ],
+    "must_not": [
+      "Treats cron design as live operations"
+    ],
+    "skill_not_invoked": "production-ops"
+  }
+}

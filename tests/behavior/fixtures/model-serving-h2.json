@@ -1,0 +1,29 @@
+{
+  "id": "model-serving-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Choose an engine based on a feature released recently and verify that the deployed version supports it.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Delegates current compatibility facts to ai-research",
+      "Separates documented support from local verification",
+      "Includes a rollback-safe probe"
+    ],
+    "must_not": [
+      "Relies on remembered release notes",
+      "Conflates serving and operations"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "eval-harness-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design a judge for subjective outputs without allowing repository skills or expected answers to leak into it.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "eval-harness",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Runs judging in an isolated empty context",
+      "Uses a strict structured verdict schema",
+      "Stores raw judge output and calibration evidence"
+    ],
+    "must_not": [
+      "Exposes hidden chain of thought",
+      "Treats malformed judge output as pass"
+    ]
+  }
+}

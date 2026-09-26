@@ -1,0 +1,5 @@
+# skill-description-sha256: 8a4b27cc9cd8ecc7cad2a6980c908b0e64933bcf439edc3eb8bdc89465ee8e5c
+interface:
+  display_name: "Inference Optimization"
+  short_description: "Optimize inference for measured hardware constraints"
+  default_prompt: "Use $inference-optimization to size memory and plan measured inference optimizations for a fixed workload."

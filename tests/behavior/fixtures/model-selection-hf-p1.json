@@ -1,0 +1,29 @@
+{
+  "id": "model-selection-hf-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "7B altında, Türkçe desteği iyi bir açık model öner ve lisansını model card'dan doğrula.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-selection-hf",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "States or asks task, hardware, license, and budget constraints",
+      "Verifies parameters, license, and access from current model cards through ai-research",
+      "Produces a reasoned shortlist"
+    ],
+    "must_not": [
+      "Fabricates parameter counts or licenses",
+      "Selects a serving engine"
+    ]
+  }
+}

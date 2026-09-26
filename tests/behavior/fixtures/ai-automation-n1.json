@@ -1,0 +1,27 @@
+{
+  "id": "ai-automation-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Canlı model endpoint'i için drift alert, incident response ve rollback tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes deployed operations to production-ops",
+      "Defines operational evidence"
+    ],
+    "must_not": [
+      "Turns the endpoint into a cron job"
+    ],
+    "skill_not_invoked": "ai-automation"
+  }
+}

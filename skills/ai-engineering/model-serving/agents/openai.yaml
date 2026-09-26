@@ -1,0 +1,5 @@
+# skill-description-sha256: fc3b68fb89103c3492bf5a41178071364766a7b4e1e3a8269e19d58bb4545feb
+interface:
+  display_name: "Model Serving"
+  short_description: "Design reliable model serving stacks and SLOs"
+  default_prompt: "Use $model-serving to compare serving engines, topology, routing, and serving-level SLOs."

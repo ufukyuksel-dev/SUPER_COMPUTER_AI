@@ -1,0 +1,29 @@
+{
+  "id": "ai-research-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Bugün üretimde kullanılabilecek güncel açık model serving API sürümlerini birincil kaynaklardan doğrula ve karar notu çıkar.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-research",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses current primary sources with URL and access date",
+      "Separates verified facts from inference",
+      "Stops when critical facts are covered"
+    ],
+    "must_not": [
+      "Claims current versions from memory",
+      "Uses uncited secondary claims"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "model-selection-hf-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "For this already-selected model, calculate VRAM and choose an AWQ or GPTQ configuration.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes hardware tuning to inference-optimization",
+      "Requires explicit memory assumptions"
+    ],
+    "must_not": [
+      "Reopens model selection without cause"
+    ],
+    "skill_not_invoked": "model-selection-hf"
+  }
+}

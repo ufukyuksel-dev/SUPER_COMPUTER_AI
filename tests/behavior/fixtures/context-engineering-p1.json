@@ -1,0 +1,29 @@
+{
+  "id": "context-engineering-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Uzun çalışan bir agent için context budget, memory, progressive disclosure ve compaction stratejisi tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "context-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Allocates context by decision value",
+      "Defines what is retained, summarized, retrieved, or dropped",
+      "Specifies degradation and compaction checks"
+    ],
+    "must_not": [
+      "Dumps all history into every turn",
+      "Builds MCP tools"
+    ]
+  }
+}

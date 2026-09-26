@@ -1,0 +1,28 @@
+{
+  "id": "ai-research-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Determine a current license fact, but no primary source is reachable.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-research",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "States that no verifiable source was found",
+      "Refuses to guess and proposes a bounded verification task"
+    ],
+    "must_not": [
+      "Presents an unverified license as fact",
+      "Hides the tool limitation"
+    ]
+  }
+}

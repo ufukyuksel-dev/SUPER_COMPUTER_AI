@@ -1,0 +1,4 @@
+# Development / CI dependencies (runtime scripts are stdlib-only unless noted).
+pyyaml==6.0.2                                   # scripts/skills/validate_skills.py, tools/dataset-collector
+pytest==8.4.2; python_version < "3.10"          # pytest 9 requires Python >= 3.10
+pytest==9.1.1; python_version >= "3.10"

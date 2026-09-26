@@ -1,0 +1,27 @@
+{
+  "id": "model-serving-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Create the on-call runbook, drift alerts, rollback, and cost controls for an already deployed endpoint.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes deployed operations to production-ops",
+      "Defines operational evidence"
+    ],
+    "must_not": [
+      "Redesigns the serving stack"
+    ],
+    "skill_not_invoked": "model-serving"
+  }
+}

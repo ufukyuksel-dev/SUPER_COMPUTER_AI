@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>S26</title></head><body>
+<form action="ok.html"><input type="search" name="q" aria-label="Search products"></form>
+<section aria-label="Price filter"><h3>Price</h3>
+ <label>Max price <input id="max" type="range" min="0" max="20" step="1" value="20"></label>
+ <span id="maxout"></span></section>
+<div id="aslider" role="slider" tabindex="0" aria-label="Minimum rating" aria-valuemin="0" aria-valuemax="5"
+     aria-valuenow="0" aria-valuetext="0 stars" style="width:100px;height:20px;background:#ddd"></div>
+<label>Quantity <input type="number" id="qty" value="1"></label>
+<label>Delivery date <input type="date" id="dd"></label>
+<div id="note" contenteditable="true" aria-label="Gift note" style="border:1px solid;min-height:20px"></div>
+<script>
+const steps = [0,50,100,150,200,250,300,350,400,450,500,525,550,575,600,650,700,800,900,1000,1050];
+const max = document.getElementById('max');
+const show = () => { const t = '$' + steps[+max.value] + (+max.value === 20 ? '+' : '');
+  max.setAttribute('aria-valuetext', t); document.getElementById('maxout').textContent = t;
+  document.title = 'S26 max ' + t; };
+max.addEventListener('input', show); show();
+const a = document.getElementById('aslider');
+a.addEventListener('keydown', e => { let v = +a.getAttribute('aria-valuenow');
+  if (e.key === 'ArrowRight' || e.key === 'ArrowUp') v = Math.min(5, v + 1);
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') v = Math.max(0, v - 1);
+  a.setAttribute('aria-valuenow', v); a.setAttribute('aria-valuetext', v + ' stars'); e.preventDefault(); });
+</script></body></html>

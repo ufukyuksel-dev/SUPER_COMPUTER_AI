@@ -1,0 +1,29 @@
+{
+  "id": "ai-system-design-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Veri hassasiyeti ve trafik hacmi belirsiz bir AI özelliğini planla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Asks narrow questions for unresolved decision-changing facts",
+      "Marks matrix rows required, unnecessary with rationale, or unresolved",
+      "Does not invent capacity or trust boundaries"
+    ],
+    "must_not": [
+      "Loops indefinitely on ambiguity",
+      "Presents one architecture as proven"
+    ]
+  }
+}

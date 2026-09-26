@@ -1,0 +1,27 @@
+{
+  "id": "ai-system-design-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "OpenAI API'nin bugünkü fiyatını resmi kaynaktan bul.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-research",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes current-fact verification to ai-research",
+      "Returns a cited current fact"
+    ],
+    "must_not": [
+      "Runs a project architecture loop"
+    ],
+    "skill_not_invoked": "ai-system-design"
+  }
+}

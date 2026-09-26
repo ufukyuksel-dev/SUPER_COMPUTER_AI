@@ -1,0 +1,29 @@
+{
+  "id": "model-selection-hf-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Select a multimodal Hugging Face model for image-and-text extraction under a fixed GPU and commercial-license constraint.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-selection-hf",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Filters by task, modality, hardware, budget, and license",
+      "Verifies gated access and model-card facts",
+      "Explains why rejected candidates fail constraints"
+    ],
+    "must_not": [
+      "Tunes the serving topology",
+      "Relies on remembered model metadata"
+    ]
+  }
+}

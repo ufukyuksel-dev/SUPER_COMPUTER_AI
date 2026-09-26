@@ -1,0 +1,29 @@
+{
+  "id": "ai-system-design-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Gizli belgelerle çalışan kurumsal bir soru-cevap sistemi için mimari, uygulama planı, kabul kriterleri ve eval planı üret.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Runs the full capability gap-scan",
+      "Composes specialist concerns as a DAG",
+      "Produces architecture, ordered plan, acceptance criteria, and eval plan"
+    ],
+    "must_not": [
+      "Uses one skill for the whole project",
+      "Treats unresolved security assumptions as facts"
+    ]
+  }
+}

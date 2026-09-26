@@ -1,0 +1,27 @@
+{
+  "id": "context-engineering-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Bir MCP tool için input/output JSON schema ve scope denetimi tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "tool-and-mcp-design",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes tool schema and security to tool-and-mcp-design",
+      "Defines bounded capability"
+    ],
+    "must_not": [
+      "Treats tool design as prompt layout"
+    ],
+    "skill_not_invoked": "context-engineering"
+  }
+}

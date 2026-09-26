@@ -1,0 +1,29 @@
+{
+  "id": "eval-harness-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Stokastik model A/B karşılaştırmasında küçük fark var; geçiş kararı ver.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "eval-harness",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses repeats, uncertainty, slice analysis, and a predeclared threshold",
+      "Checks practical impact and regression risk",
+      "Reports inconclusive evidence when warranted"
+    ],
+    "must_not": [
+      "Calls one run significant",
+      "Cherry-picks a slice"
+    ]
+  }
+}

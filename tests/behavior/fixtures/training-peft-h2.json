@@ -1,0 +1,29 @@
+{
+  "id": "training-peft-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "No reliable recipe exists for a novel preference-tuning variant.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-peft",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "States the knowledge boundary",
+      "Creates a focused ai-research task",
+      "Proposes a conservative baseline and experiment gate"
+    ],
+    "must_not": [
+      "Fabricates hyperparameters",
+      "Claims research certainty"
+    ]
+  }
+}

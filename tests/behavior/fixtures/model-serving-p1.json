@@ -1,0 +1,29 @@
+{
+  "id": "model-serving-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Düşük gecikmeli açık model servisi için vLLM, TGI, llama.cpp server ve SGLang seçeneklerini karşılaştır.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines workload, hardware, concurrency, and SLO constraints",
+      "Compares engines and topology with evidence",
+      "Recommends a validation path"
+    ],
+    "must_not": [
+      "Performs model selection",
+      "Guesses current engine features"
+    ]
+  }
+}

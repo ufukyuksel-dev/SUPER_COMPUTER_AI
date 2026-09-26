@@ -1,0 +1,32 @@
+{
+  "id": "composite-model-research",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "7B altı Türkçe destekli bir model seç ve lisansını model card'dan doğrula.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skills_invoked": [
+      "model-selection-hf",
+      "ai-research"
+    ],
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Verifies the license from a current primary model-card or official repository source",
+      "Includes URL and access date",
+      "Connects verified facts to a constrained model recommendation"
+    ],
+    "must_not": [
+      "Fabricates license or parameter facts",
+      "Treats one skill as sufficient for both concerns"
+    ]
+  }
+}

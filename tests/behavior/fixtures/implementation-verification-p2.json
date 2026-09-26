@@ -1,0 +1,29 @@
+{
+  "id": "implementation-verification-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Verify a completed pipeline whose unit tests pass but whose external dependency may be unavailable.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "implementation-verification",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Checks the end-to-end path beyond unit tests",
+      "Separates infrastructure limitations from product failures",
+      "Labels inaccessible evidence UNVERIFIED"
+    ],
+    "must_not": [
+      "Treats unit tests as full acceptance",
+      "Fakes external output"
+    ]
+  }
+}

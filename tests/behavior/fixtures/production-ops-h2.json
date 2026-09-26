@@ -1,0 +1,29 @@
+{
+  "id": "production-ops-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Prepare operations for PII exposure and prompt-injection incidents.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines detection, containment, redaction, access review, notification, and recovery evidence",
+      "Keeps sensitive data out of logs",
+      "Assigns human approval points"
+    ],
+    "must_not": [
+      "Copies PII into incident artifacts",
+      "Treats prompt filtering as complete security"
+    ]
+  }
+}

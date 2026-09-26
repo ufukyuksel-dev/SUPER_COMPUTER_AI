@@ -1,0 +1,27 @@
+{
+  "id": "training-peft-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Deploy the trained checkpoint behind a scaled inference endpoint.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes deployment stack to model-serving",
+      "Requests serving constraints"
+    ],
+    "must_not": [
+      "Continues training work"
+    ],
+    "skill_not_invoked": "training-peft"
+  }
+}

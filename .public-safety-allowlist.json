@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "path": "mcp/servers/premiere-pro/src/__tests__/utils/telemetry.test.ts",
+      "rule": "home-path",
+      "match": "/Users/het/",
+      "reason": "Upstream tests of the telemetry path sanitizer: the fixtures must contain realistic home paths to prove they are stripped."
+    },
+    {
+      "path": "mcp/servers/premiere-pro/src/tools/domains/project.ts",
+      "rule": "home-path",
+      "match": "/Users/user/",
+      "reason": "Generic placeholder in a tool-schema description (example of an absolute project location)."
+    }
+  ]
+}

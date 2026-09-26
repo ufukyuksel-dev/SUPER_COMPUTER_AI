@@ -1,0 +1,26 @@
+{
+  "id": "training-data-engineering-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Does example.com's terms of service allow using their articles for model training?",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Refuses to answer ToS/license questions from memory",
+      "Delegates verification to ai-research with a bounded task"
+    ],
+    "must_not": [
+      "States the license terms without a cited source"
+    ]
+  }
+}

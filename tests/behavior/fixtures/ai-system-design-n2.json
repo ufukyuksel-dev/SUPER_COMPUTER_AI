@@ -1,0 +1,27 @@
+{
+  "id": "ai-system-design-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Choose one concrete Hugging Face model from three candidates and verify each license.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-selection-hf",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes concrete model choice to model-selection-hf",
+      "Requires current model-card evidence"
+    ],
+    "must_not": [
+      "Uses ai-system-design as the model picker"
+    ],
+    "skill_not_invoked": "ai-system-design"
+  }
+}

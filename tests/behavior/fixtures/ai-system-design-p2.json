@@ -1,0 +1,29 @@
+{
+  "id": "ai-system-design-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Scope and architect an AI coding assistant from incomplete requirements, including option trade-offs and verification.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Separates knowns, unknowns, and questions",
+      "Records options, trade-offs, recommendation, and rejected alternatives",
+      "Defines measurable acceptance criteria"
+    ],
+    "must_not": [
+      "Implements code",
+      "Skips the capability matrix"
+    ]
+  }
+}

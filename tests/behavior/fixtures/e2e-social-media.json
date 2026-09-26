@@ -1,0 +1,35 @@
+{
+  "id": "e2e-social-media",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Bir sosyal medya analiz sistemi kurmak istiyorum; planla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Covers or explicitly eliminates with rationale: data sources plus ToS and rate limits",
+      "Covers or eliminates NLP and model selection",
+      "Covers or eliminates RAG",
+      "Covers or eliminates tool or MCP needs",
+      "Covers cost",
+      "Covers prompt-injection and PII security",
+      "Defines evaluation",
+      "Covers production and observability",
+      "Covers automation"
+    ],
+    "must_not": [
+      "Creates a social-media business-domain skill",
+      "Leaves a capability gap silent"
+    ]
+  }
+}

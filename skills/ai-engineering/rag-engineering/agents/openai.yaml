@@ -1,0 +1,5 @@
+# skill-description-sha256: 5ba02352476ebff653932656b3f0113de430a60699dbc3fd11b332c1fa3c3585
+interface:
+  display_name: "RAG Engineering"
+  short_description: "Engineer and diagnose grounded RAG systems"
+  default_prompt: "Use $rag-engineering to design or diagnose retrieval, reranking, grounding, and RAG-specific evaluation."

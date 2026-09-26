@@ -1,0 +1,29 @@
+{
+  "id": "training-data-engineering-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Türkçe müşteri destek diyaloglarından SFT dataseti hazırlamak istiyorum; kaynak seçimi, provenance ve split planı çıkar.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Maps the training objective to a data format before collecting",
+      "Requires ToS/license check and per-example provenance",
+      "Plans dedup before leakage-safe splits"
+    ],
+    "must_not": [
+      "Accepts web data without license or provenance",
+      "Designs the final behavioral eval set (owned by eval-harness)"
+    ]
+  }
+}

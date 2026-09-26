@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>S37</title></head><body>
+<div role="grid"><div role="rowgroup" id="grp"><div id="month">October</div><div role="row">
+<div role="gridcell" id="cell" data-iso="2026-10-20"><button id="day"
+ onclick="document.title='picked ' + document.getElementById('cell').getAttribute('data-iso')">20</button></div>
+</div></div></div>
+<script>
+window.addPrice = () => { document.getElementById('day').textContent = '20 ₺7,560'; };
+window.recycle = () => { document.getElementById('cell').setAttribute('data-iso', '2026-11-20');
+                         document.getElementById('month').textContent = 'November'; };
+</script></body></html>

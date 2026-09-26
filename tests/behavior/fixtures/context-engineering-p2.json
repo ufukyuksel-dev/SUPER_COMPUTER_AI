@@ -1,0 +1,29 @@
+{
+  "id": "context-engineering-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design prompt and context structure that stays reliable as tool traces and documents grow.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "context-engineering",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Separates stable instructions, task state, evidence, and raw artifacts",
+      "Uses progressive disclosure",
+      "Defines long-context failure tests"
+    ],
+    "must_not": [
+      "Assumes larger context solves relevance",
+      "Changes retrieval infrastructure"
+    ]
+  }
+}

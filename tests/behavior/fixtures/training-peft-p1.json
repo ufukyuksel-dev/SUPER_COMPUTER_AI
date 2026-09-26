@@ -1,0 +1,30 @@
+{
+  "id": "training-peft-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Alan verim için QLoRA uyarlaması planla: veri alımı, format, split, eğitim, checkpoint ve değerlendirmeye devir.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-peft",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Consumes a curated dataset handoff and delegates sourcing/cleaning/splits to training-data-engineering",
+      "Revalidates format and chat template at load time",
+      "Treats hyperparameters as starting points",
+      "Includes overfitting checks and stop/rollback gates"
+    ],
+    "must_not": [
+      "Re-does data sourcing or cleaning inside the training plan",
+      "Claims one universal LoRA configuration"
+    ]
+  }
+}

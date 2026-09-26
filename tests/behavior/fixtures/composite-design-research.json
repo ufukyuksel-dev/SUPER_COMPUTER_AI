@@ -1,0 +1,32 @@
+{
+  "id": "composite-design-research",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Güncel sağlayıcı kısıtlarına bağlı, gizli dokümanlarla çalışan bir AI sistemi için kaynaklı araştırma yap ve mimari+kabul planı üret.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skills_invoked": [
+      "ai-system-design",
+      "ai-research"
+    ],
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses primary-source research for current provider constraints",
+      "Runs the capability gap-scan",
+      "Integrates cited findings into architecture, acceptance criteria, and an eval plan"
+    ],
+    "must_not": [
+      "Invents current provider facts",
+      "Collapses research and architecture into an uncited checklist"
+    ]
+  }
+}

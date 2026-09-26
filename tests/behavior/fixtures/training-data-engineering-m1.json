@@ -1,0 +1,26 @@
+{
+  "id": "training-data-engineering-m1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Modelimi geliştirmek için veri lazım.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-data-engineering",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Asks for the training objective and target data format before collecting",
+      "Asks about budget or scale constraints"
+    ],
+    "must_not": [
+      "Starts collection or synthesis without clarifying the objective"
+    ]
+  }
+}

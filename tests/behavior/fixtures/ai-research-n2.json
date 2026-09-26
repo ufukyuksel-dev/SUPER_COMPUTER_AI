@@ -1,0 +1,27 @@
+{
+  "id": "ai-research-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design the architecture and acceptance criteria for a new AI document assistant using already-approved evidence.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes architecture work to ai-system-design",
+      "Uses the approved evidence"
+    ],
+    "must_not": [
+      "Executes fresh open-ended research without a fact gap"
+    ],
+    "skill_not_invoked": "ai-research"
+  }
+}

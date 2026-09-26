@@ -1,0 +1,29 @@
+{
+  "id": "production-ops-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Dağıtılmış AI sistemi için monitoring, drift, incident response, maliyet ve rollout/rollback hazırlığı yap.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines SLOs, signals, alerts, ownership, incident flow, and rollback gates",
+      "Covers quality, safety, latency, availability, and cost",
+      "Links alerts to actions"
+    ],
+    "must_not": [
+      "Uses dashboards without thresholds",
+      "Omits rollback"
+    ]
+  }
+}

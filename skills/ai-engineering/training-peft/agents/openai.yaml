@@ -1,0 +1,5 @@
+# skill-description-sha256: 013fb797bcddd534de4201194849ac03c2560243937740089920282f6c4738bf
+interface:
+  display_name: "Training PEFT"
+  short_description: "Plan training runs on curated dataset handoffs"
+  default_prompt: "Use $training-peft to plan an adaptation run from a curated dataset handoff through checkpoint delivery."

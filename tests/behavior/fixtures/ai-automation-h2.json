@@ -1,0 +1,29 @@
+{
+  "id": "ai-automation-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "An ingestion job fails halfway after writing some outputs.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-automation",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses idempotency keys, checkpoints, reconciliation, and bounded replay",
+      "Distinguishes retryable from terminal failures",
+      "Reports partial side effects"
+    ],
+    "must_not": [
+      "Blindly reruns the whole job",
+      "Loses audit history"
+    ]
+  }
+}

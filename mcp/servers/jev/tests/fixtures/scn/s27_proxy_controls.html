@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>S27</title><style>
+.dd{position:relative;display:inline-block}.dd select{position:absolute;inset:0;opacity:.01;width:130px;height:22px}
+.dd .prompt{display:inline-block;width:130px;height:22px;border:1px solid #999;pointer-events:none}
+.ab{position:relative;display:inline-block;width:120px;height:30px;border:1px solid}
+.ab input{position:absolute;inset:0;opacity:.01;cursor:pointer}.ab .t{display:block;line-height:30px;text-align:center}
+.cover{position:relative}.cover .veil{position:absolute;left:0;top:0;width:200px;height:40px;background:#eee}
+</style></head><body>
+<!-- Amazon-like sort: opacity .01 native select under a styled prompt span -->
+<span>Sort by:</span><span class="dd"><span class="prompt">Featured</span>
+<select id="sort" aria-label="Sort by:" onchange="document.title='sorted '+this.value">
+<option value="featured" selected>Featured</option><option value="price-asc">Price: Low to High</option>
+<option value="price-desc">Price: High to Low</option></select></span>
+<!-- Amazon-like popover buttons: nameless submit inputs under their label span -->
+<form onsubmit="return false"><span class="ab"><input type="submit" onclick="document.title='dismissed'"><span class="t">Dismiss</span></span>
+<span class="ab"><input type="submit" onclick="document.title='change address'"><span class="t">Change Address</span></span></form>
+<!-- a real overlay (another page element) over a button: must stay hidden -->
+<div class="cover"><button id="hidden" onclick="document.title='BAD'">Hidden behind</button>
+<div class="veil"><a href="ok.html#veil">Veil link</a></div></div>
+</body></html>

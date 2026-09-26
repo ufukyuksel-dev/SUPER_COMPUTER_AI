@@ -1,0 +1,29 @@
+{
+  "id": "ai-automation-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Her gün veri kaynağını tarayan, AI analizi yapan ve yayın öncesi insan onayı isteyen pipeline tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-automation",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines trigger, inputs, state, idempotency, retries, approval, output, and audit",
+      "Bounds unattended actions",
+      "Handles source and policy failures"
+    ],
+    "must_not": [
+      "Performs irreversible publication without approval",
+      "Creates duplicate side effects"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "role-researcher",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "agent_role": "researcher",
+  "prompt": "OpenAI Responses API background mode özelliğinin 2026-08-24 itibarıyla resmi durumunu ve kısıtlarını araştır; ardından bu özellik için bir üretim mimarisi seç.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "workspace_changes": "forbidden",
+    "evidence_required": [
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Uses primary-source evidence with URL and access date",
+      "Reports unknowns or conflicts"
+    ],
+    "must_not": [
+      "Chooses an architecture",
+      "Edits implementation files"
+    ]
+  }
+}

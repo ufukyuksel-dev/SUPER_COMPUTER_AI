@@ -1,0 +1,29 @@
+{
+  "id": "inference-optimization-h2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Compare GGUF, AWQ, GPTQ, and FP8 for a fixed workload whose runtime support is partly unknown.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Checks runtime and hardware compatibility before ranking formats",
+      "Uses ai-research for current support facts",
+      "Marks unsupported combinations"
+    ],
+    "must_not": [
+      "Assumes every format is interchangeable",
+      "Invents kernel support"
+    ]
+  }
+}

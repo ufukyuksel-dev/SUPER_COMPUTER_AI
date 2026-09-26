@@ -1,0 +1,29 @@
+{
+  "id": "model-selection-hf-h1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Model card ile lisans dosyası çelişen gated bir HF modeli ticari kullanım için değerlendir.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-selection-hf",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Delegates current facts to ai-research",
+      "Reports the conflict and access gate",
+      "Does not recommend until license uncertainty is resolved"
+    ],
+    "must_not": [
+      "Invents legal certainty",
+      "Ignores gated access"
+    ]
+  }
+}

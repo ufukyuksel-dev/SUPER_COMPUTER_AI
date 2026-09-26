@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>S36</title></head><body>
+<label>Where to? <input id="to" role="combobox" aria-expanded="false"></label>
+<ul id="list" role="listbox" hidden></ul>
+<script>
+const to = document.getElementById('to'), list = document.getElementById('list');
+to.addEventListener('input', () => setTimeout(() => {
+  list.innerHTML = '<li role="option" tabindex="0">London, United Kingdom</li><li role="option" tabindex="0">Londonderry</li>';
+  list.hidden = false; to.setAttribute('aria-expanded', 'true');
+}, 400));
+</script></body></html>

@@ -1,0 +1,13 @@
+{
+  "customer_id": "1234567890",
+  "production_customer_id": "1234567890",
+  "apps": {
+    "GOOGLE_APP_STORE": "com.example.app",
+    "APPLE_APP_STORE": "1234567890"
+  },
+  "login_customer_id": null,
+  "test_only": false,
+  "writes_enabled": false,
+  "max_campaign_daily_budget_micros": null,
+  "allow_remove": false
+}

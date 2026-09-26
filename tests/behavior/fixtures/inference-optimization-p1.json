@@ -1,0 +1,29 @@
+{
+  "id": "inference-optimization-p1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Tek RTX 4090 üzerinde 13B model için VRAM hesabı yap, quantization seç ve ölçüm planı çıkar.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "inference-optimization",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Shows weights, KV-cache, runtime overhead, and concurrency assumptions",
+      "Compares quantization quality and memory trade-offs",
+      "Defines a measurement plan"
+    ],
+    "must_not": [
+      "Guesses that the model fits",
+      "Chooses a serving topology"
+    ]
+  }
+}

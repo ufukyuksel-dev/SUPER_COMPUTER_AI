@@ -1,0 +1,5 @@
+# skill-description-sha256: c31dd05de821a296d65f9bb91536cfa955dbb9ad77eb8910ff0dcf2e63060e6b
+interface:
+  display_name: "AI Research"
+  short_description: "Research current AI facts from primary sources"
+  default_prompt: "Use $ai-research to verify current decision-bearing facts from primary sources."

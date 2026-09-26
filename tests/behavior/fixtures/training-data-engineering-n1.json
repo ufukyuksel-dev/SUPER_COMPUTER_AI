@@ -1,0 +1,26 @@
+{
+  "id": "training-data-engineering-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "What LoRA rank and learning rate should I start with for a 7B model?",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "training-peft",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes training configuration to training-peft"
+    ],
+    "must_not": [
+      "Starts a data curation plan"
+    ],
+    "skill_not_invoked": "training-data-engineering"
+  }
+}

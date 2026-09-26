@@ -1,0 +1,27 @@
+{
+  "id": "training-peft-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Bu model için metrik, eval seti ve LLM-as-judge regresyon harness'i tasarla.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "eval-harness",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes evaluation design to eval-harness",
+      "Defines evaluation questions"
+    ],
+    "must_not": [
+      "Changes training configuration"
+    ],
+    "skill_not_invoked": "training-peft"
+  }
+}

@@ -1,0 +1,5 @@
+# skill-description-sha256: 9f26f52605b96f89b9df7ab5334da7a96b51fe1e76a4ed22ff6735a278dc0cff
+interface:
+  display_name: "AI System Design"
+  short_description: "Architect AI systems with verified acceptance plans"
+  default_prompt: "Use $ai-system-design to scope an AI project and produce architecture, a plan, acceptance criteria, and an eval plan."

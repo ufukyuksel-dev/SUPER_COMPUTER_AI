@@ -1,0 +1,29 @@
+{
+  "id": "production-ops-p2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Design operational provider fallback resilience after deployment, including budgets and failure containment.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "production-ops",
+    "evidence_required": [
+      "discovery",
+      "explicit-execution",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Defines failure classes, circuit breaking, budgets, and safe fallback",
+      "Prevents cascading retries",
+      "Measures fallback quality and cost"
+    ],
+    "must_not": [
+      "Confuses serving-time routing with incident operations",
+      "Creates silent degradation"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+# skill-description-sha256: 6ecc9442067fc93015202083f430e1fbd3b951294cc518f44311cdf9735ebec9
+interface:
+  display_name: "Production Operations"
+  short_description: "Operate deployed AI systems safely and reliably"
+  default_prompt: "Use $production-ops to define observability, resilience, incident, cost, and rollout controls."

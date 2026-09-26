@@ -1,0 +1,27 @@
+{
+  "id": "model-selection-hf-n1",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "tr",
+  "prompt": "Seçilmiş model için vLLM, TGI ve llama.cpp arasında serving stack seç.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "model-serving",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes serving-stack choice to model-serving",
+      "Defines serving constraints"
+    ],
+    "must_not": [
+      "Uses model-selection-hf as the serving expert"
+    ],
+    "skill_not_invoked": "model-selection-hf"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "implementation-verification-n2",
+  "platforms": [
+    "codex",
+    "claude"
+  ],
+  "lang": "en",
+  "prompt": "Create an architecture and implementation plan for a feature that has not been built.",
+  "repeats": 3,
+  "pass_threshold": 2,
+  "timeout_s": 300,
+  "expect": {
+    "skill_invoked": "ai-system-design",
+    "evidence_required": [
+      "discovery",
+      "behavioral-compliance"
+    ],
+    "must": [
+      "Routes planning to ai-system-design",
+      "Defines future acceptance criteria"
+    ],
+    "must_not": [
+      "Pretends there is a deliverable to verify"
+    ],
+    "skill_not_invoked": "implementation-verification"
+  }
+}
