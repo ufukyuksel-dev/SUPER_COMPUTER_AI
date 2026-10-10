@@ -1,3 +1,4 @@
+<!-- private -->
 # WordFall release integration
 
 Workspace locations are machine-specific and live in the private overlay:

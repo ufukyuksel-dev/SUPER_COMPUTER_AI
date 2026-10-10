@@ -7,7 +7,10 @@ description: Create localized app-store descriptions and polished screenshot art
 
 ## Establish the source
 
-Use the user's existing ASO/design system as the canonical composition and export source. Inspect its actual locale definitions, art files, gameplay sources, slide ordering, renderer and export controls. For WordFall read [the project reference](references/wordfall.md). An old README's product claims or an export page's filename do not establish current behavior.
+Use the user's existing ASO/design system as the canonical composition and export source. Inspect its actual locale definitions, art files, gameplay sources, slide ordering, renderer and export controls. An old README's product claims or an export page's filename do not establish current behavior.
+<!-- private:start -->
+For WordFall read [the project reference](references/wordfall.md).
+<!-- private:end -->
 
 Compare the requested listing against the real app. Capture real gameplay in each target language and appropriate device family. Preserve the successful reference artwork; new modes should use its existing composition style and slide mechanism. Do not create a parallel design system.
 

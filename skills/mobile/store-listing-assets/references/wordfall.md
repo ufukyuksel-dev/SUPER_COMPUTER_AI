@@ -1,3 +1,4 @@
+<!-- private -->
 # WordFall ASO source and delivery
 
 Canonical artwork/export project: the "WordFall Design System" ASO repository. Consumer: the WordFall app repository.
