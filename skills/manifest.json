@@ -73,6 +73,18 @@
         "ads"
       ]
     },
+    "growth-loop": {
+      "category": "mobile",
+      "status": "active",
+      "profile": "basic",
+      "platforms": [
+        "claude",
+        "codex"
+      ],
+      "bundles": [
+        "mobile"
+      ]
+    },
     "implementation-verification": {
       "category": "ai-engineering",
       "status": "active",

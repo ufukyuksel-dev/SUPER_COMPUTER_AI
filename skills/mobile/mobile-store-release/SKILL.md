@@ -11,7 +11,9 @@ Treat build, upload, review submission, and public availability as separate stat
 
 Read the repository's Fastfile, Gemfile/lockfile, workflows, Android variants and signing configuration, Xcode shared schemes/configurations, and version sources before choosing commands. Reuse the existing setup; do not initialize over it. An API upload key is not an app signing key. iOS extensions need matching versions, entitlements, and distribution provisioning as well as the main app.
 
+<!-- private:start -->
 For WordFall, read [the project reference](references/wordfall.md). Its ASO source is a separate design repository; do not invent an independent screenshot pipeline.
+<!-- private:end -->
 
 Resolve app identifiers and current store state through read-only access. Inspect credential presence and names without printing private keys, passwords, JSON credentials or encoded values. Existing local version numbers are not proof of the highest store build. Preserve user authorization from the conversation; ask only for an actual missing decision, credential access, or required declaration.
 
